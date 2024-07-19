@@ -1,0 +1,413 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Rank</title>
+    <style>
+        body {
+            background-color: #a58a8a;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        // ==================================solve question 1=======
+        // let arr = [1, 2, 3, 4, 5];
+        // const totalsum = arr.sort((a, b) => {
+        //     return a - b;
+        // }).reduce((acc, num) => {
+        //     return acc + num;
+        // }, 0);
+        // const minSum = totalsum - arr[arr.length - 1];
+        // const maxSum = totalsum - arr[0];
+        // console.log("minSum",minSum ,"maxSum",maxSum);
+
+
+        // ==================================solve question 2=======
+
+        // const arr = [-4, 3, -9, 0, 4, -1];
+
+        // function plusminus(arr) {
+        //     let positive = 0;
+        //     let negative = 0;
+        //     let zero = 0;
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i] > 0) {
+        //             positive++;
+        //         } else if (arr[i] < 0) {
+        //             negative++;
+        //         } else if (arr[i] === 0) {
+        //             zero++;
+        //         }
+        //     }
+
+        //     let positiveFraction = positive / arr.length;
+        //     let negativeFraction = negative / arr.length;
+        //     let zeroFraction = zero / arr.length;
+
+        //     console.log(positiveFraction.toFixed(6));
+        //     console.log(negativeFraction.toFixed(6));
+        //     console.log(zeroFraction.toFixed(6));
+        // }
+
+        // plusminus(arr);
+
+
+        // ==================================solve question 3=======
+        // let s = "07:05:45PM";
+
+        // function timeConversion(s) {
+
+        //     const [time, period] = s.split(" ");
+        //     const [hours, minutes, seconds] = time.split(":");
+
+
+        //     let militaryHours = parseInt(hours, 10);
+        //     if (period === "PM" && militaryHours !== 12) {
+        //         militaryHours += 12;
+        //     } else if (period === "AM" && militaryHours === 12) {
+        //         militaryHours = 0;
+        //     }
+
+
+        //     const militaryTime = [
+        //         militaryHours.toString().padStart(2, "0"),
+        //         minutes,
+        //         seconds
+        //     ].join(":");
+
+        //     return militaryTime;
+        // }
+
+        // console.log(timeConversion(s));
+
+        // let string = "Hello World I am here";
+        // let reverce = string.split('').reverse().join('');
+        // console.log(reverce);
+
+        // let arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        // let count = 0;
+        // for (let index = 0; index < arr1.length; index++) {
+        //     if (arr1[index] === "a") {
+        //         count++;
+        //     }
+        // }
+        // console.log(count);
+
+
+        // const obj = {
+        //     "darshil": 21,
+        //     "Abhilash": 22,
+        //     "vinod": 21,
+
+        // };
+
+        // const sortchracteway = Object.entries(obj).sort();
+        // console.log(sortchracteway);
+
+
+        //         . input:- let arr = [1,5,3,6,4,2,6,8,3,3];
+        // output:- [1,5],[4,2],[3,3]
+
+        // let arr = [1, 5, 3, 6, 4, 2, 6, 8, 3, 3];
+        // let firstarr = [];
+        // let secondarr = [];
+        // let thirdarr = [];
+
+
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr[i] === 1 || arr[i] === 5) {
+        //         firstarr.push(arr[i]);
+        //     }
+        //     else if (arr[i] === 4 || arr[i] === 2) {
+        //         secondarr.push(arr[i]);
+        //     }
+
+        //     else {
+        //         console.log(arr[i]);
+        //     }
+        // }
+
+        // for (let index = 8; index < arr.length; index++) {
+        //     if (arr.length >= 9 && arr[index] === 3) {
+        //         alert("length greter than 8")
+        //         thirdarr.push(arr[index]);
+        //     }
+
+        // }
+
+        // console.log("firstarr", firstarr, "secondarr", secondarr, "thirdarr", thirdarr);
+
+
+
+        // const Uniqearr = [1, 2, 3, 4, 1, 1];
+        // // const uniqearr = [...new Set(Uniqearr)];
+        // // console.log(uniqearr);
+
+
+
+        // const uniqueValues = Uniqearr.filter((value, index, array) => {
+        //     return array.indexOf(value) === index;
+        // });
+
+        // console.log(uniqueValues); // Output: [1, 2, 3, 4]
+
+
+        // const userlist = [
+        //     {
+        //         name: "Darshil",
+        //         age: 21,
+        //         address:"sdfgh"
+        //     },
+        //     {
+        //         name: "Darshil",
+        //         age: 21
+        //     },
+        //     {
+        //         name: "monu",
+        //         age: 21
+        //     },
+        // ];
+
+        // const uniqueUsers = userlist.filter((value, index, array) => {
+
+        //     return array.findIndex(obj => obj.name === value.name && obj.age === value.age) === index;
+        // });
+
+        // console.log(uniqueUsers);
+
+
+        // const arr = new Array(1,2,3,4,5,6,7,8,9,10,11,-12);
+        // const result1 = arr.every((item)=>{
+        //     return item>0;
+        // })
+        // console.log(result1);
+
+
+
+        // ====================== array all method ===================================
+        const arr = new Array(1, 2, 3, 4, 5, 6, 7, 8);
+        arr.pop();
+        console.log("pop method ", arr);
+        arr.push(1, 2, 3, 4);
+        console.log("push method", arr);
+        arr.shift();
+        console.log("shift method", arr);
+        arr.unshift(1, 2, 3, 4);
+        console.log("unshift method", arr);
+        arr.slice(0, 3);
+        console.log("slice method from  0 to 3", arr.slice(0, 3));
+        arr.splice(0, 3);
+        console.log("splice method", arr);
+        arr.reverse();
+        console.log("reverse method", arr);
+        arr.sort((a, b) => {
+            return a - b;
+        });
+        console.log("sort method ascending order", arr);
+        arr.sort((a, b) => {
+            return b - a;
+        });
+        console.log("sort method descending order", arr);
+
+
+
+        const result = [...new Set(arr)]
+        console.log("using set array method", result);
+        const result1 = new Set(arr)
+        console.log("using set object method", result1);
+        const uniqearr = arr.filter((values, index, array) => {
+            return array.indexOf(values) === index;
+        })
+
+        console.log("uniqearr using filter and indexof the method", uniqearr);
+
+        console.log(arr);
+        const evenvalues = arr.sort((a, b) => {
+            return a - b;
+        }).filter((item) => {
+            return item % 2 === 0;
+        }).reduce((acc, item) => {
+            return acc + item;
+        }, 0)
+        console.log("evenvalues using filter and sort method", evenvalues);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+<!-- oop concept practice  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop concept</title>
+</head>
+
+<body>
+    <script>
+
+        function BanckAccount(username, balance = 0) {
+            this.username = username;
+            this.balance = balance;
+            this.Ac = Date.now();
+        }
+
+        BanckAccount.prototype.deposit = function (amount) {
+            this.balance += amount;
+        };
+
+        BanckAccount.prototype.withdraw = function (amount) {
+            this.balance -= amount;
+        };
+
+        function SavingAc(username, balance = 0) {
+            BanckAccount.call(this, username, balance);
+        }
+
+
+
+
+        // SavingAc.prototype = Object.create(BanckAccount.prototype);
+
+
+        // const savingmonu = new SavingAc("monuKumar", 20);
+        // savingmonu.deposit(30);
+        // savingmonu.withdraw(30);
+        // console.log(savingmonu);
+
+        // class BanckAccount {
+        //     constructor(username, balance = 0) {
+        //         this.username = username;
+        //         this.balance = balance;
+        //         this.Ac = Date.now();
+        //     }
+        //     deposit(amount) {
+        //         this.balance += amount;
+        //     }
+        //     withdraw(amount) {
+        //         this.balance -= amount;
+        //     }
+        // }
+
+
+        // class saving extends BanckAccount {
+        //     constructor(username, balance = 0) {
+        //         super(username, balance);
+        //     }
+        //     takepersonal(amount) {
+        //         console.log(` take personal ${amount}`);
+        //     }
+        // }
+
+
+
+        // const monu = new saving("monu", 100)
+        // monu.takepersonal(100);
+        // monu.deposit(50);
+        // console.log(monu);
+
+
+        // class BanckAccount {
+        //     constructor(username, balance = 0) {
+        //         this.username = username;
+        //         this._balance = balance;
+        //         this.Ac = Date.now();
+        //     }
+        //     // setter for  _balance
+        //     set balance(amount) {
+        //         if (amount >= 0) {
+        //             this._balance = amount;
+        //         } else {
+        //             console.error("Balance can't be negative.");
+        //         }
+        //     }
+
+        //     // Getter method for balance
+        //     get balance() {
+        //         return this._balance;
+        //     }
+
+        //     deposit(amount) {
+        //         if (amount > 0) {
+        //             this._balance += amount;
+        //         } else {
+        //             console.error("Deposit amount must be greater than zero.");
+        //         }
+        //     }
+
+        //     withdraw(amount) {
+        //         if (amount > 0 && amount <= this._balance) {
+        //             this._balance -= amount;
+        //         } else {
+        //             console.error("Invalid withdrawal amount or insufficient balance.");
+        //         }
+        //     }
+        // }
+
+        // class Saving extends BanckAccount {
+        //     constructor(username, balance = 0) {
+        //         super(username, balance);
+        //     }
+        // }
+
+        // const monus = new Saving("monus", 500);
+        // monus.deposit(200);
+        // monus.balance = 2000;
+        // console.log(monus);
+
+      const arr= [1,2,3];
+      const arr1 = [1,2,3,4];
+
+    //   console.log(...arr ,...arr1);
+    //   console.log(Math.max(...arr));
+
+    // const obj ={
+    //     name: "monu",
+    //     age: 21,
+    //     address:"abc"
+    // }
+
+    // const {name,...rest} = obj;
+    // console.log(rest);
+
+    
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    </script>
+</body>
+
+</html>
